@@ -38,7 +38,7 @@ public class GameServlet extends HttpServlet {
                         request.setAttribute("winner", "The computer");
                         break;
                     case USER:
-                        request.setAttribute("winner", "You");
+                        request.setAttribute("winner", "tu");
                         break;
                     default:
                         break;
@@ -47,9 +47,9 @@ public class GameServlet extends HttpServlet {
         } else {
             // Si ya hay un ganador tras el turno del usuario
             if (winner == GamePlayer.COMPUTER) {
-                request.setAttribute("winner", "The computer");
+                request.setAttribute("gana", "la computadora");
             } else if (winner == GamePlayer.USER) {
-                request.setAttribute("winner", "You");
+                request.setAttribute("ganas", "tu");
             }
         }
 
